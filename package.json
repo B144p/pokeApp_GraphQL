@@ -11,8 +11,12 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.5",
+    "antd": "^5.10.1",
+    "graphql": "^16.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
