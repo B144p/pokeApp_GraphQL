@@ -14,7 +14,7 @@ const App = () => {
 
 const PageRender = () => {
   let routers = [
-    ...publicRouters,
+    publicRouters,
     developmentRouters,
   ]
   const ROUTER_SCOPE = useRoutes(routers)
