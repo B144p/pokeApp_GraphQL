@@ -3,11 +3,23 @@ import { useRoutes } from 'react-router-dom'
 import { client } from "./app/client";
 import { developmentRouters, publicRouters } from "./router";
 import './App.css'
+import { Suspense } from "react";
+import { Spin } from "antd";
+
+const Loading = () => {
+  return (
+    <div className={'loading-center-lg'}>
+      <Spin />
+    </div>
+  )
+}
 
 const App = () => {
   return (
     <ApolloProvider client={client}>
-      <PageRender />
+      <Suspense fallback={<Loading />}>
+        <PageRender />
+      </Suspense>
     </ApolloProvider>
   )
 }

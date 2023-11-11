@@ -1,7 +1,8 @@
 import { lazy } from "react";
-import { CustomRouteObjectTypes, RoutesTypes } from "./router.model";
+import { CustomRouteObjectTypes } from "./router.model";
 const BaseLayout = lazy(() => import("./layouts/BaseLayout"))
 const FetchComp = lazy(() => import("./FetchComp"))
+const PokemonView = lazy(() => import("./views/app/detail/PokemonView"))
 
 const publicRoutes = [
   { path: "/", element: <FetchComp /> },
@@ -9,6 +10,7 @@ const publicRoutes = [
 
 const developmentRoutes = [
   { path: "/", element: <FetchComp /> },
+  { path: "/pokemon-chain/:id", element: <PokemonView /> },
 ]
 
 export const publicRouters: CustomRouteObjectTypes = {

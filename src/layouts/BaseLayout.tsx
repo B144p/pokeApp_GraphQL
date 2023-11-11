@@ -6,8 +6,23 @@ interface BaseLayoutProps {
   children?: ReactNode;
 }
 
-const BaseLayout: FC<BaseLayoutProps> = ({ children }) => {
-  return <>{children || <Outlet />}</>;
+// const BaseLayout: FC<BaseLayoutProps> = ({ children }) => {
+const BaseLayout: FC<BaseLayoutProps> = () => {
+  // return <>{children || <Outlet />}</>;
+  return (
+    <div
+      style={{
+        margin: 0,
+        padding: 0,
+        boxSizing: 'border-box',
+        minWidth: '100vw',
+        minHeight: '100vh',
+        // backgroundColor: 'blue',
+      }}
+    >
+      <Outlet />
+    </div>
+  );
 };
 
 BaseLayout.propTypes = {
